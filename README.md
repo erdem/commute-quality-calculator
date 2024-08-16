@@ -37,3 +37,11 @@ python src/main.py --file=samples/input3.json
 ```shell
 python src/main.py --json='{"weather":{"temperature":-5,"humidity":90.5,"wind_speed":25},"traffic_flow":{"average_speed":10.5,"traffic_density":[0.95,0.98,0.99],"incident_reports":10},"road_condition":{"road_quality":2,"lighting_conditions":3,"accident_history":7}}'
 ```
+
+**Output:**
+```shell
+{
+    "quality_score": -2.076320939334637,
+    "commute_quality": "Poor"
+}
+```
