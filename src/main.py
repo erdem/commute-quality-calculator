@@ -2,12 +2,16 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Dict, Any
+from typing import Any, Dict
 
 from pydantic import ValidationError
 
-from schemas import CommuteQualityInput, CommuteQualityParams, OverallCommuteQualitySchema
 import calculators
+from schemas import (
+    CommuteQualityInput,
+    CommuteQualityParams,
+    OverallCommuteQualitySchema,
+)
 
 
 def load_json(json_string: str) -> Dict[Any, Any]:
@@ -75,9 +79,13 @@ def main():
     try:
         if args.file:
             input_data = load_json_file(args.file)
-        else:
-            input_data = load_json(args.json)
+        if args.json:
+            import ipdb
 
+            ipdb.set_trace()
+            input_data = load_json(args.json)
+        else:
+            print("No argument provided, check `python src/main.py --help")
         result = get_commute_quality(input_data)
         print(result.model_dump_json(indent=4))
     except (FileNotFoundError, IsADirectoryError, ValueError, ValidationError) as e:
