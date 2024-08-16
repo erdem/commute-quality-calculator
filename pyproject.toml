@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "commute-quality-calculator"
+version = "0.1.0"
+description = "Demonstrate Pydantic usage in a statistic data model"
+authors = ["Erdem Ozkol <github@erdemozkol.com>"]
+license = "GNU"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.8.2"
+
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.13.2"
+black = "^24.8.0"
+pytest = "^8.3.2"
+pytest-cov = "^5.0.0"
+pre-commit = "^3.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+
+
+[tool.pytest.ini_options]
+addopts = "--cov=src --cov-report=term-missing --cov-report=html"
+
+[tool.isort]
+profile = "black"

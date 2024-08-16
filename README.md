@@ -1,2 +1,4 @@
 # commute_quality_calculator
-Demostrate
+Demonstrate Pydantic usage in a statistic data model
+
+
