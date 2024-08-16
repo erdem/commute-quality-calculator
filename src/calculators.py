@@ -1,6 +1,8 @@
 from typing import List, Optional
+from typeguard import typechecked
 
 
+@typechecked
 def calculate_comfort_index(
     temperature: int, humidity: float, wind_speed: Optional[float] = None
 ) -> float:
@@ -10,6 +12,7 @@ def calculate_comfort_index(
     return result
 
 
+@typechecked
 def calculate_traffic_flow_efficiency(
     average_speed: float, traffic_density: List[float], incident_reports: Optional[int] = None
 ) -> float:
@@ -19,6 +22,7 @@ def calculate_traffic_flow_efficiency(
     return efficiency
 
 
+@typechecked
 def calculate_safety_score(
     road_quality: int,
     lighting_conditions: int,
@@ -42,6 +46,7 @@ def calculate_safety_score(
     return score
 
 
+@typechecked
 def calculate_overall_commute_quality_score(
     comfort_index: float, traffic_flow_efficiency: float, safety_score: float
 ) -> float:
