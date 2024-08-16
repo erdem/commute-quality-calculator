@@ -1,0 +1,15 @@
+{
+  "weather": {
+    "temperature": 10,
+    "humidity": 75.3
+  },
+  "traffic_flow": {
+    "average_speed": 20.8,
+    "traffic_density": [0.65, 0.70, 0.72]
+  },
+  "road_condition": {
+    "road_quality": 4,
+    "lighting_conditions": 2,
+    "accident_history": 3
+  }
+}
