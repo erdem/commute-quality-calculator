@@ -1,8 +1,8 @@
 from src.calculators import (
     calculate_comfort_index,
-    calculate_traffic_flow_efficiency,
-    calculate_safety_score,
     calculate_overall_commute_quality_score,
+    calculate_safety_score,
+    calculate_traffic_flow_efficiency,
 )
 
 
@@ -19,9 +19,9 @@ def test_calculate_traffic_flow_efficiency():
 
 
 def test_calculate_safety_score():
-    assert calculate_safety_score(8, 7, 2, 50, [0.3, 0.4, 0.3]) == 353.6666666666667
-    assert calculate_safety_score(9, 8, 1, 60, [0.2, 0.2, 0.1], 3, 5) == 478.5
-    assert calculate_safety_score(7, 6, 3, 40, [0.5, 0.5], 1) == 241.75
+    assert calculate_safety_score(8, 7, 2, 50, [0.3, 0.4, 0.3]) == 60.666666666666664
+    assert calculate_safety_score(9, 8, 1, 60, [0.2, 0.2, 0.1], 3, 5) == 66.5
+    assert calculate_safety_score(7, 6, 3, 40, [0.5, 0.5], 1) == 47.75
 
 
 def test_calculate_overall_commute_quality_score():

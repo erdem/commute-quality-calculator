@@ -79,10 +79,7 @@ def main():
     try:
         if args.file:
             input_data = load_json_file(args.file)
-        if args.json:
-            import ipdb
-
-            ipdb.set_trace()
+        elif args.json:
             input_data = load_json(args.json)
         else:
             print("No argument provided, check `python src/main.py --help")

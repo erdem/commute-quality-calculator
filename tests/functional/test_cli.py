@@ -8,8 +8,8 @@ def test_valid_input_path(run_cli_command, valid_input_path):
     assert error == ""
 
     result = json.loads(output)
-    assert result["quality_score"] == 88.35474254742546
-    assert result["commute_quality"] == "Good"
+    assert result["quality_score"] == 44.388075880758805
+    assert result["commute_quality"] == "Average"
 
 
 def test_valid_input_json(run_cli_command, valid_input_json):
@@ -19,8 +19,8 @@ def test_valid_input_json(run_cli_command, valid_input_json):
     assert error == ""
 
     result = json.loads(output)
-    assert result["quality_score"] == 88.35474254742546
-    assert result["commute_quality"] == "Good"
+    assert result["quality_score"] == 44.388075880758805
+    assert result["commute_quality"] == "Average"
 
 
 def test_valid_input_without_optionals(run_cli_command, valid_input_without_optionals_path):
@@ -30,7 +30,7 @@ def test_valid_input_without_optionals(run_cli_command, valid_input_without_opti
     assert error == ""
 
     result = json.loads(output)
-    assert result["quality_score"] == 31.519445362371297
+    assert result["quality_score"] == 25.25277869570463
     assert result["commute_quality"] == "Average"
 
 

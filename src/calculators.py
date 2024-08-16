@@ -1,4 +1,5 @@
 from typing import List, Optional
+
 from typeguard import typechecked
 
 
@@ -36,7 +37,8 @@ def calculate_safety_score(
     inverse_accident_history = 1 / (accident_history + 1)
     score = inverse_traffic_density
     score += road_quality * inverse_accident_history
-    score += lighting_conditions * average_speed
+    score += lighting_conditions
+    score += average_speed
 
     if incident_reports is not None:
         score -= incident_reports

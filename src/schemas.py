@@ -45,7 +45,7 @@ class OverallCommuteQualitySchema(BaseModel):
 
     @model_validator(mode="before")
     @classmethod
-    def set_commute_quality(cls, data: dict) -> dict:
+    def determine_commute_quality(cls, data: dict) -> dict:
         score = data.get("quality_score")
         if score is None:
             raise ValueError("quality_score is required to determine `commute_quality`")
